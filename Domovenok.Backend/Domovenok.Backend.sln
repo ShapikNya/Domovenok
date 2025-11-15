@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DDB88A82-F671-4A9B-AAF5-CDA57DEA62AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{5F25D22C-5471-4987-9C74-7D53A773D313}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2711F9E1-17EF-4B63-AF13-D684437F17B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domovenok.Domain", "Domovenok.Domain\Domovenok.Domain.csproj", "{D92DE5AE-1028-4BCA-BAEC-8DA5792AEACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domovenok.Application", "Domovenok.Application\Domovenok.Application.csproj", "{ECB9C199-65BC-4469-839B-DEB0471FF9D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domovenok.Persistence", "Domovenok.Persistence\Domovenok.Persistence.csproj", "{C51801D6-5C0F-41D3-AD58-84026459DD0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domovenok.WebApi", "Domovenok.WebApi\Domovenok.WebApi.csproj", "{6B2D9917-2B36-42C4-A363-938B141EFEE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D92DE5AE-1028-4BCA-BAEC-8DA5792AEACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92DE5AE-1028-4BCA-BAEC-8DA5792AEACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92DE5AE-1028-4BCA-BAEC-8DA5792AEACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92DE5AE-1028-4BCA-BAEC-8DA5792AEACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB9C199-65BC-4469-839B-DEB0471FF9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB9C199-65BC-4469-839B-DEB0471FF9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB9C199-65BC-4469-839B-DEB0471FF9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9C199-65BC-4469-839B-DEB0471FF9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51801D6-5C0F-41D3-AD58-84026459DD0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51801D6-5C0F-41D3-AD58-84026459DD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51801D6-5C0F-41D3-AD58-84026459DD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51801D6-5C0F-41D3-AD58-84026459DD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B2D9917-2B36-42C4-A363-938B141EFEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B2D9917-2B36-42C4-A363-938B141EFEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B2D9917-2B36-42C4-A363-938B141EFEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B2D9917-2B36-42C4-A363-938B141EFEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D92DE5AE-1028-4BCA-BAEC-8DA5792AEACB} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{ECB9C199-65BC-4469-839B-DEB0471FF9D5} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{C51801D6-5C0F-41D3-AD58-84026459DD0C} = {DDB88A82-F671-4A9B-AAF5-CDA57DEA62AC}
+		{6B2D9917-2B36-42C4-A363-938B141EFEE3} = {5F25D22C-5471-4987-9C74-7D53A773D313}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01A24987-091F-4DCB-BE92-B847D1E8D5E8}
+	EndGlobalSection
+EndGlobal
