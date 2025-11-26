@@ -16,6 +16,7 @@ namespace Domovenok.Domain.Entities
         public bool IsRead { get; set; }
         public Guid? RelatedEntityId { get; set; }
         public EntityType? RelatedEntityType { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         //1:M
         public User User { get; set; }

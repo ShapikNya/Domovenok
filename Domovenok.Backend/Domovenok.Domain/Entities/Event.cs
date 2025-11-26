@@ -17,7 +17,7 @@ namespace Domovenok.Domain.Entities
         public EventType EventType { get; set; }
         public DateTime EventDate { get; set; }
         public bool IsRecurring { get; set; }
-        public string RecurrenceFrequency { get; set; }
+        public string? RecurrenceFrequency { get; set; }
         public int? RecurrenceInterval { get; set; }
         public StatusType Status { get; set; }
         public int? ReminderDaysBefore { get; set; }

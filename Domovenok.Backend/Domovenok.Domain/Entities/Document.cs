@@ -19,7 +19,7 @@ namespace Domovenok.Domain.Entities
         public string? FileUrl { get; set; }
         public string? FileName { get; set; }
         public long? FileSize { get; set; }
-        public string? FileType { get; set; }
+        public string FileType { get; set; }
 
         public DateTime? ExpiryDate { get; set; }
         public bool IsFavorite { get; set; }
