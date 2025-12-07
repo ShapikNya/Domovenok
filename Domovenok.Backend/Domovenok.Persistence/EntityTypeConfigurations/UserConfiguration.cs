@@ -61,15 +61,18 @@ namespace Domovenok.Persistence.EntityTypeConfigurations
             // Навигации
             builder.HasOne(x => x.UserPreferences)
                    .WithOne(p => p.User)
-                   .HasForeignKey<UserPreferences>(p => p.UserId);
+                   .HasForeignKey<UserPreferences>(p => p.UserId)
+                   .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.Items)
                    .WithOne(i => i.User)
-                   .HasForeignKey(i => i.UserId);
+                   .HasForeignKey(i => i.UserId)
+                   .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(x => x.Documents)
                    .WithOne(i => i.User)
-                   .HasForeignKey(i => i.UserId);
+                   .HasForeignKey(i => i.UserId)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
