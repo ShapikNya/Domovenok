@@ -9,6 +9,6 @@ namespace Domovenok.Application.Users.Queries.GetAllUsers
 {
     public class GetAllUsersQuery : IRequest<UsersListVm>
     {
-        public Guid Id { get; set; }
+
     }
 }
