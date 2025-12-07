@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domovenok.Application.Users.Queries.GetAllUsers
 {
-    internal class UsersListVm
+    public class UsersListVm
     {
+        public IList<UserLookupDto> Users { get; set; }
     }
 }

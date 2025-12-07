@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domovenok.Application.Users.Commands.Delete
 {
-    internal class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand>
+    public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand>
     {
         private readonly IDomovenokDbContext _dbContext;
 
