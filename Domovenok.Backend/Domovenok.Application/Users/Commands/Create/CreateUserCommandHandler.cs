@@ -1,6 +1,8 @@
-﻿using Domovenok.Domain.Entities;
+﻿using Domovenok.Application.Common.Exceptions;
+using Domovenok.Domain.Entities;
 using Domovenok.Domain.Enums;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,13 @@ namespace Domovenok.Application.Users.Commands.Create
         public async Task<Guid> Handle(CreateUserCommand request,
            CancellationToken cancellationToken)
         {
+            var userExists = await _dbContext.Users.AnyAsync(u => u.Email == request.Email);
+
+            if (userExists)
+            {
+                throw new AlreadyExistsException("user",request.Email);
+            }
+
             var user = new User
             {
                 Id = Guid.NewGuid(),
@@ -29,7 +38,7 @@ namespace Domovenok.Application.Users.Commands.Create
                 PasswordHash = request.Password, //!!!ДОБАВИТЬ ХЭШИРОВАНИЕ
                 Role = request.Role,
                 Name = request.NickName,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.Now,
                 AvatarUrl = "/static/avatars/default.png", //!!!ДОБАВИТЬ СТ. ФОТО
                 UserPreferences = new UserPreferences
                 {

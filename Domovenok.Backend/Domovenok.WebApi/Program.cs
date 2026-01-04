@@ -1,6 +1,7 @@
 using Domovenok.Application;
 using Domovenok.Application.Common.Mappings;
 using Domovenok.Persistence;
+using Domovenok.WebApi.Middleware;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -35,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 
+app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowAll");
