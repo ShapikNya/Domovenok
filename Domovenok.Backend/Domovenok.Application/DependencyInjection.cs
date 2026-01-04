@@ -28,15 +28,3 @@ namespace Domovenok.Application
     }
 }
 
-/*public static IServiceCollection AddApplication(this IServiceCollection services)
-{
-    services.AddMediatR(cfg =>
-    {
-        cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-    });
-    services.AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
-    services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-    services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
-
-    return services;
-}*/

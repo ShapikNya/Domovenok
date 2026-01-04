@@ -30,10 +30,27 @@ namespace Domovenok.Persistence
                 options.UseNpgsql(connectionString);
             });
 
-            services.AddScoped<DomovenokDbContext>(provider =>
+            services.AddScoped<IDomovenokDbContext>(provider =>
                 provider.GetService<DomovenokDbContext>());
 
+            var serviceProvider = services.BuildServiceProvider();
+            using (var scope = serviceProvider.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<DomovenokDbContext>();
+                try
+                {
+                    dbContext.Database.EnsureCreated();
+                  
+                    dbContext.Database.Migrate();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    throw;
+                }
+            }
+
             return services;
-        }
+        }   
     }
 }
