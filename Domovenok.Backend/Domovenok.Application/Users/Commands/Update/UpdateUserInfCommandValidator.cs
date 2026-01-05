@@ -23,7 +23,7 @@ namespace Domovenok.Application.Users.Commands.Update
                 .Matches(@"^[^@\s]+@[^@\s]+\.[^@\s]+$")
                 .WithMessage("Email должен содержать '@' и домен");
 
-            RuleFor(x => x.Name)
+            RuleFor(x => x.NickName)
                 .NotEmpty().WithMessage("Имя обязательно")
                 .MinimumLength(2).WithMessage("Имя должно содержать минимум 2 символа")
                 .MaximumLength(30).WithMessage("Имя не должно превышать 30 символов")

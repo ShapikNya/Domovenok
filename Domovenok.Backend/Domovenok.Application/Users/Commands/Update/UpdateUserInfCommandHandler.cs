@@ -23,7 +23,7 @@ namespace Domovenok.Application.Users.Commands.Update
             {
                 throw new NotFoundException(nameof(user), request.Id);
             }
-            user.Email = request.Email; user.Name= request.Name; user.Phone = request.Phone; user.BirthDate = request.BirthDate; user.AvatarUrl = request.AvatarUrl;
+            user.Email = request.Email; user.Name= request.NickName; user.Phone = request.Phone; user.BirthDate = request.BirthDate; user.AvatarUrl = request.AvatarUrl;
             await _dbContext.SaveChangesAsync(cancellationToken);
         }
     }

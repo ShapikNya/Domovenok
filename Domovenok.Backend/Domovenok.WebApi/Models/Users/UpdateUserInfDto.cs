@@ -9,7 +9,7 @@ namespace Domovenok.WebApi.Models.Users
     public class UpdateUserInfDto : IMapWith<UpdateUserInfCommand>
     {
         public string Email { get; set; }
-        public string Name { get; set; }
+        public string NickName { get; set; }
         public string Phone { get; set; }
         public DateTime BirthDate { get; set; }
         public string AvatarUrl { get; set; }
